@@ -1,5 +1,5 @@
 import java.util.Set ;
-import java.util.HashSet ;
+import java.util.TreeSet ;
 class Person{
 	private String name ;
 	private int age ;
@@ -7,13 +7,13 @@ class Person{
 		this.name = name ;
 		this.age = age ;
 	}
-	public String toString(){
+	public String gtoString(){
 		return "姓名：" + this.name + "；年龄：" + this.age ;
 	}
 };
-public class RepeatDemo01{
+public class TreeSetDemo02{
 	public static void main(String args[]){
-		Set<Person> allSet = new HashSet<Person>() ;
+		Set<Person> allSet = new TreeSet<Person>() ;
 		allSet.add(new Person("张三",30)) ;
 		allSet.add(new Person("李四",31)) ;
 		allSet.add(new Person("王五",32)) ;

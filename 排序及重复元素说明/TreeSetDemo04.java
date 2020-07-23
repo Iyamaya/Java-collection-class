@@ -1,6 +1,6 @@
 import java.util.Set ;
-import java.util.HashSet ;
-class Person{
+import java.util.TreeSet ;
+class Person implements Comparable<Person>{
 	private String name ;
 	private int age ;
 	public Person(String name,int age){
@@ -10,10 +10,19 @@ class Person{
 	public String toString(){
 		return "姓名：" + this.name + "；年龄：" + this.age ;
 	}
+	public int compareTo(Person per){
+		if(this.age>per.age){
+			return 1 ;
+		}else if(this.age<per.age){
+			return -1 ;
+		}else{
+			return this.name.compareTo(per.name) ;	// 调用String中的compareTo()方法
+		}
+	}
 };
-public class RepeatDemo01{
+public class TreeSetDemo04{
 	public static void main(String args[]){
-		Set<Person> allSet = new HashSet<Person>() ;
+		Set<Person> allSet = new TreeSet<Person>() ;
 		allSet.add(new Person("张三",30)) ;
 		allSet.add(new Person("李四",31)) ;
 		allSet.add(new Person("王五",32)) ;
