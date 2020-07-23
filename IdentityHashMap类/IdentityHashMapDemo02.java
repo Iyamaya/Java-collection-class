@@ -1,5 +1,4 @@
 import java.util.IdentityHashMap ;
-import java.util.HashMap ;
 import java.util.Set ;
 import java.util.Iterator ;
 import java.util.Map ;
@@ -31,10 +30,10 @@ class Person{
 		return "姓名：" + this.name + "，年龄：" + this.age ;
 	}
 };
-public class IdentityHashMapDemo01{
+public class IdentityHashMapDemo02{
 	public static void main(String args[]){
 		Map<Person,String> map = null ;	// 声明Map对象
-		map = new HashMap<Person,String>() ;
+		map = new IdentityHashMap<Person,String>() ;
 		map.put(new Person("张三",30),"zhangsan_1") ;	// 加入内容
 		map.put(new Person("张三",30),"zhangsan_2") ;	// 加入内容
 		map.put(new Person("李四",31),"lisi") ;	// 加入内容
